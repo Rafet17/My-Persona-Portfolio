@@ -1,0 +1,13 @@
+// ! Base SCSS
+@import "./base/reset";
+@import "./base/typhograpy";
+
+// ! Components SCSS
+
+
+// ! Layout SCSS
+@import "./layout/header";
+@import "./layout/footer";
+
+// ! Pages SCSS
+@import "./pages/home";
