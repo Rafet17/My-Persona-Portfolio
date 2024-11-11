@@ -1,3 +1,6 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+
 * {
   margin: 0;
   padding: 0;
@@ -6,11 +9,20 @@
 
 a {
   text-decoration: none;
-  color: #000;
+  color: $color-white;
 }
 
 ul {
   list-style: none;
-  color: #000;
+  color: $color-white;
 }
+
+body{
+    font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  @include container(80%);
+}
+
 

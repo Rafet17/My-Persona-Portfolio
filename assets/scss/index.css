@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -6,10 +7,78 @@
 
 a {
   text-decoration: none;
-  color: #000;
+  color: #fff;
 }
 
 ul {
   list-style: none;
-  color: #000;
+  color: #fff;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  max-width: 80%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #25262f;
+}
+.header .container .row {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .container .row .logo h4 {
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.header .container .row .logo h4 span {
+  color: #80db66;
+}
+.header .container .row .logo:hover h4 {
+  color: #80db66;
+}
+.header .container .row .logo:hover span {
+  color: #fff;
+}
+.header .container .row .navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.header .container .row .navBar .navList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.header .container .row .navBar .navList .navItem a {
+  text-transform: capitalize;
+  font-size: 17px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.header .container .row .navBar .navList .navItem a:hover {
+  color: #80db66;
+}
+.header .container .row .navBar .cvDownload a {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #80db66;
+  padding: 10px 14px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+.header .container .row .navBar .cvDownload a:hover {
+  background-color: #80db66;
+  color: #25262f;
 }/*# sourceMappingURL=index.css.map */

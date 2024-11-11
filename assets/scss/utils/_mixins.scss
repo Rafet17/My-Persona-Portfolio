@@ -1,0 +1,33 @@
+@import "./variables";
+
+@mixin container($max-width) {
+  max-width: $max-width;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@mixin flex($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin transition() {
+  transition: all 0.3s ease;
+}
+
+@mixin hover($color) {
+  color: $color;
+}
+
+@mixin btnHover($bg, $color){
+  background-color: $bg;
+  color: $color;
+}
+
+@mixin btn($bg, $color, $border) {
+  background-color: $bg;
+  color: $color;
+  border: $border;
+  padding: 10px 14px;
+}
