@@ -120,7 +120,13 @@
         &:nth-child(3) a i {
           background-color: #0077b5;
         }
+        &:nth-child(4) a i {
+          background-color: #054465;
+        }
       }
+    }
+    .cvDownload{
+      display: none;
     }
     &.active{
       transform: translateX(0);

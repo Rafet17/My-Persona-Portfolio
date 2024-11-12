@@ -145,6 +145,12 @@ body {
 .header .menuBar .socialList .socialItem:nth-child(3) a i {
   background-color: #0077b5;
 }
+.header .menuBar .socialList .socialItem:nth-child(4) a i {
+  background-color: #054465;
+}
+.header .menuBar .cvDownload {
+  display: none;
+}
 .header .menuBar.active {
   transform: translateX(0);
 }
