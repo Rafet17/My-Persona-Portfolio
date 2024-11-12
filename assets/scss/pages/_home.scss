@@ -1,6 +1,7 @@
 @import "../utils/mixins";
 @import "../utils/variables";
 
+// * hero section start
 .hero {
   background: url(../images/home/slider-bg.jpg);
   background-position: center center;
@@ -10,7 +11,7 @@
   .container {
     .row {
       @include flex(space-between, center);
-      .secCap { 
+      .secCap {
         h4 {
           font-size: 24px;
           line-height: 1.3;
@@ -23,6 +24,7 @@
           font-size: 100px;
           color: $color-white;
           text-transform: capitalize;
+          line-height: 1.1;
         }
         h2 {
           text-transform: capitalize;
@@ -33,14 +35,14 @@
           min-height: 60px;
           margin-bottom: 20px;
         }
-        a{
-            @include btn(#80db66, #25262f, 1px solid #80db66);
-            @include transition();
-            border-radius: 4px;
-            margin-bottom: 50px;
-            &:hover{
-                @include btnHover(transparent, #80db66);
-            }
+        a {
+          @include btn(#80db66, #25262f, 1px solid #80db66);
+          @include transition();
+          border-radius: 4px;
+          margin-bottom: 50px;
+          &:hover {
+            @include btnHover(transparent, #80db66);
+          }
         }
       }
       .secImg {
@@ -53,114 +55,226 @@
     }
   }
 }
+// * hero section end
+
+// * card section start
+.cardSection {
+  padding: 100px 0;
+  background-color: #212228;
+  .container {
+    .row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+      .card {
+        border-radius: 20px;
+        box-shadow: 0px 5px 60px 0px rgba(2, 24, 93, 0.08);
+        padding: 55px 48px 35px 48px;
+        background-color: $color-bg;
+        @include transition();
+        .icon {
+          margin-bottom: 20px;
+        }
+        .cap {
+          h5 {
+            color: $color-white;
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 22px;
+          }
+          p {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1.67;
+            color: #b0aac0;
+          }
+        }
+        &:nth-child(even) {
+          transform: translateY(40px);
+        }
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}
+// * card section end
+
+// * About section start
+
+.about{
+    background-color: $color-bg;
+    .container{
+        .row{
+            
+        }
+    }
+}
+
+// * About section end
+
+
+
+
 // ! Responsive design
 
 // ! 1024px
-@media (max-width: 1024px){
-.hero{
-    .container{
-        .row{
-            .secCap{
-                h1{
-                    font-size: 80px;
-                }
-            }
+@media (max-width: 1024px) {
+  // * hero section start
+  .hero {
+    .container {
+      .row {
+        .secCap {
+          h1 {
+            font-size: 80px;
+          }
         }
+      }
     }
-}
+  }
+  // * hero section end
+
+  // * card section start
+  .cardSection {
+    .container {
+      .row {
+        .card {
+          padding: 30px 20px 10px 20px;
+          .icon {
+            img {
+              max-width: 40px;
+              max-height: 40px;
+            }
+          }
+          .cap {
+            h5 {
+              margin-bottom: 15px;
+            }
+            p {
+              font-size: 17px;
+            }
+          }
+        }
+      }
+    }
+  }
+  // * card section end
 }
 
 // ! 992px
-@media (max-width: 992px){
-    .hero{
-        .container{
-            .row{
-                flex-direction: column;
-                .secCap{
-                    text-align: center;
-                }
-                .secImg{
-                    margin-top: 30px;
-                    max-width: 60%;
-                }
-            }
+@media (max-width: 992px) {
+  // * hero section start
+  .hero {
+    .container {
+      .row {
+        flex-direction: column;
+        .secCap {
+          text-align: center;
+        }
+        .secImg {
+          margin-top: 30px;
+          max-width: 60%;
+        }
+      }
+    }
+  }
+  // * hero section end
+
+  // * card section start
+  .cardSection{
+    .container{
+        .row{
+           grid-template-columns: repeat(2, 1fr); 
         }
     }
+  }
+  // * card section end
 }
 
 // ! 768px
-@media (max-width: 768px){
-    .hero{
-        .container{
-            .row{
-                .secCap{
-                    h1{
-                        font-size: 60px;
-                    }
-                    h2{
-                        font-size: 28px;
-                    }
-                }
-            }
+@media (max-width: 768px) {
+  .hero {
+    .container {
+      .row {
+        .secCap {
+          h1 {
+            font-size: 60px;
+          }
+          h2 {
+            font-size: 28px;
+          }
         }
+      }
     }
+  }
 }
 
 // ! 545px
-@media (max-width: 545px){
-    .hero{
-        .container{
-            .row{
-                .secCap{
-                    h1{
-                        font-size: 50px;
-                    }
-                    h2{
-                        font-size: 28px;
-                    }
-                }
-            }
+@media (max-width: 545px) {
+  // * hero section start
+  .hero {
+    .container {
+      .row {
+        .secCap {
+          h1 {
+            font-size: 50px;
+          }
+          h2 {
+            font-size: 28px;
+          }
+        }
+      }
+    }
+  }
+  // * hero section end
+
+  // * card section start
+  .cardSection{
+    .container{
+        .row{
+            grid-template-columns: 1fr;
         }
     }
+  }
+  // * card section end
 }
 
 // ! 455px
-@media (max-width: 455px){
-    .hero{
-        .container{
-            .row{
-                .secCap{
-                    h1{
-                        font-size: 40px;
-                    }
-                    h2{
-                        font-size: 24px;
-                    }
-                }
-            }
+@media (max-width: 455px) {
+  .hero {
+    .container {
+      .row {
+        .secCap {
+          h1 {
+            font-size: 40px;
+          }
+          h2 {
+            font-size: 24px;
+          }
         }
+      }
     }
+  }
 }
 
 // ! 365px
-@media (max-width: 365px){
-    .hero{
-        .container{
-            .row{
-                .secCap{
-                    h4{
-                        font-size: 18px;
-                    }
-                    h1{
-                        font-size: 30px;
-                    }
-                    h2{
-                        font-size: 20px;
-                    }
-                }
-            }
+@media (max-width: 365px) {
+  .hero {
+    .container {
+      .row {
+        .secCap {
+          h4 {
+            font-size: 18px;
+          }
+          h1 {
+            font-size: 30px;
+          }
+          h2 {
+            font-size: 20px;
+          }
         }
+      }
     }
+  }
 }
-
-

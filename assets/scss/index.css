@@ -175,12 +175,6 @@ body {
   .header .container .row .navBar .cvDownload {
     display: none;
   }
-  .header .menuBar {
-    width: 100%;
-  }
-  .header .menuBar .exit {
-    right: 50px;
-  }
   .header .menuBar .cvDownload {
     padding-top: 70px;
     padding-left: 30px;
@@ -246,6 +240,7 @@ body {
   font-size: 100px;
   color: #fff;
   text-transform: capitalize;
+  line-height: 1.1;
 }
 .hero .container .row .secCap h2 {
   text-transform: capitalize;
@@ -278,9 +273,63 @@ body {
   width: 100%;
 }
 
+.cardSection {
+  padding: 100px 0;
+  background-color: #212228;
+}
+.cardSection .container .row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+.cardSection .container .row .card {
+  border-radius: 20px;
+  box-shadow: 0px 5px 60px 0px rgba(2, 24, 93, 0.08);
+  padding: 55px 48px 35px 48px;
+  background-color: #25262f;
+  transition: all 0.3s ease;
+}
+.cardSection .container .row .card .icon {
+  margin-bottom: 20px;
+}
+.cardSection .container .row .card .cap h5 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 22px;
+}
+.cardSection .container .row .card .cap p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.67;
+  color: #b0aac0;
+}
+.cardSection .container .row .card:nth-child(even) {
+  transform: translateY(40px);
+}
+.cardSection .container .row .card:hover {
+  transform: scale(1.05);
+}
+
+.about {
+  background-color: #25262f;
+}
 @media (max-width: 1024px) {
   .hero .container .row .secCap h1 {
     font-size: 80px;
+  }
+  .cardSection .container .row .card {
+    padding: 30px 20px 10px 20px;
+  }
+  .cardSection .container .row .card .icon img {
+    max-width: 40px;
+    max-height: 40px;
+  }
+  .cardSection .container .row .card .cap h5 {
+    margin-bottom: 15px;
+  }
+  .cardSection .container .row .card .cap p {
+    font-size: 17px;
   }
 }
 @media (max-width: 992px) {
@@ -293,6 +342,9 @@ body {
   .hero .container .row .secImg {
     margin-top: 30px;
     max-width: 60%;
+  }
+  .cardSection .container .row {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 768px) {
@@ -309,6 +361,9 @@ body {
   }
   .hero .container .row .secCap h2 {
     font-size: 28px;
+  }
+  .cardSection .container .row {
+    grid-template-columns: 1fr;
   }
 }
 @media (max-width: 455px) {
