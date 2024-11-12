@@ -10,7 +10,7 @@
       .logo {
         a {
           font-size: 30px;
-          font-weight: 600;
+          font-weight: 700;
           color: $color-white;
           cursor: pointer;
           @include transition();
@@ -19,7 +19,7 @@
           }
         }
         &:hover {
-          h4 {
+          a {
             @include hover(#80db66);
           }
           span {
