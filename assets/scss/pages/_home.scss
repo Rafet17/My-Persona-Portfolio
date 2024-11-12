@@ -103,19 +103,56 @@
 
 // * About section start
 
-.about{
-    background-color: $color-bg;
-    .container{
-        .row{
-            
+.about {
+  background-color: $color-bg;
+  padding: 100px 0;
+  .container {
+    .row {
+      .secTitle {
+        h5 {
+          @include title();
         }
+        h2 {
+          font-size: 60px;
+          margin-bottom: 30px;
+          color: $color-white;
+        }
+        p {
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 1.67;
+          color: #b0aac0;
+          padding-bottom: 20px;
+          border-bottom: 1px solid #5b5959;
+        }
+      }
+      .infoWrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-top: 30px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #5b5959;
+        .singleInfo {
+          h6 {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1.67;
+            color: #b0aac0;
+            &.bold {
+              font-weight: 700;
+            }
+
+            a{
+                color: #b0aac0;
+            }
+          }
+        }
+      }
     }
+  }
 }
 
 // * About section end
-
-
-
 
 // ! Responsive design
 
@@ -182,11 +219,11 @@
   // * hero section end
 
   // * card section start
-  .cardSection{
-    .container{
-        .row{
-           grid-template-columns: repeat(2, 1fr); 
-        }
+  .cardSection {
+    .container {
+      .row {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
   }
   // * card section end
@@ -230,11 +267,11 @@
   // * hero section end
 
   // * card section start
-  .cardSection{
-    .container{
-        .row{
-            grid-template-columns: 1fr;
-        }
+  .cardSection {
+    .container {
+      .row {
+        grid-template-columns: 1fr;
+      }
     }
   }
   // * card section end

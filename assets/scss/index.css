@@ -313,7 +313,47 @@ body {
 
 .about {
   background-color: #25262f;
+  padding: 100px 0;
 }
+.about .container .row .secTitle h5 {
+  font-size: 18px;
+  letter-spacing: 7px;
+  color: #80db66;
+  text-transform: uppercase;
+}
+.about .container .row .secTitle h2 {
+  font-size: 60px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+.about .container .row .secTitle p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.67;
+  color: #b0aac0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #5b5959;
+}
+.about .container .row .infoWrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #5b5959;
+}
+.about .container .row .infoWrapper .singleInfo h6 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.67;
+  color: #b0aac0;
+}
+.about .container .row .infoWrapper .singleInfo h6.bold {
+  font-weight: 700;
+}
+.about .container .row .infoWrapper .singleInfo h6 a {
+  color: #b0aac0;
+}
+
 @media (max-width: 1024px) {
   .hero .container .row .secCap h1 {
     font-size: 80px;

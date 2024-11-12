@@ -20,7 +20,7 @@
   color: $color;
 }
 
-@mixin btnHover($bg, $color){
+@mixin btnHover($bg, $color) {
   background-color: $bg;
   color: $color;
 }
@@ -30,5 +30,12 @@
   color: $color;
   border: $border;
   padding: 10px 14px;
+  text-transform: uppercase;
+}
+
+@mixin title() {
+  font-size: 18px;
+  letter-spacing: 7px;
+  color: $color-main;
   text-transform: uppercase;
 }
