@@ -4,6 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- * Fontawesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <!-- * Css Link -->
     <link rel="stylesheet" href="./assets/scss/index.css" />
     <title>Portfolio</title>
@@ -13,25 +22,61 @@
     <header class="header">
       <div class="container">
         <div class="row">
-            <div class="logo">
-                <h4>Rafet<span>hv</span></h4>
-              </div>
-              <nav class="navBar">
-                <ul class="navList">
-                  <li class="navItem"><a href="#">home</a></li>
-                  <li class="navItem"><a href="#">about</a></li>
-                  <li class="navItem"><a href="#">skills</a></li>
-                  <li class="navItem"><a href="#">my works</a></li>
-                  <li class="navItem"><a href="#">services</a></li>
-                  <li class="navItem"><a href="#">contact</a></li>
-                </ul>
-                <div class="cvDownload">
-                    <a href="./assets/file/RAFƏT HƏSƏNOV CV.pdf" download class="download-button"> download cv</a>
-                </div>
-              </nav>
+          <div class="logo">
+            <a href="./index.html">Rafet<span>hv</span></a>
+          </div>
+          <nav class="navBar">
+            <ul class="navList">
+              <li class="navItem"><a href="#">home</a></li>
+              <li class="navItem"><a href="#">about</a></li>
+              <li class="navItem"><a href="#">skills</a></li>
+              <li class="navItem"><a href="#">my works</a></li>
+              <li class="navItem"><a href="#">services</a></li>
+              <li class="navItem"><a href="#">contact</a></li>
+            </ul>
+            <div class="cvDownload">
+              <a
+                href="./assets/file/RAFƏT HƏSƏNOV CV.pdf"
+                download
+                class="download-button"
+              >
+                download cv</a
+              >
+            </div>
+            <a href="#" class="bar"><i class="fa-solid fa-bars"></i></a>
+          </nav>
+        </div>
+        
+      </div>
+      <div class="menuBar">
+        <i class="fa-solid fa-circle-xmark exit"></i>
+        <ul class="menuList">
+          <li class="navItem"><a href="#">home</a></li>
+          <li class="navItem"><a href="#">about</a></li>
+          <li class="navItem"><a href="#">skills</a></li>
+          <li class="navItem"><a href="#">my works</a></li>
+          <li class="navItem"><a href="#">services</a></li>
+          <li class="navItem"><a href="#">contact</a></li>
+        </ul>
+        <h5>follow me</h5>
+        <ul class="socialList">
+          <li class="socialItem"><a href="https://www.facebook.com/?locale=az_AZ"><i class="fa-brands fa-facebook-f"></i></a></li>
+          <li class="socialItem"><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
+          <li class="socialItem"><a href="https://az.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a></li>
+        </ul>
+        <div class="cvDownload">
+          <a
+            href="./assets/file/RAFƏT HƏSƏNOV CV.pdf"
+            download
+            class="download-button"
+          >
+            download cv</a
+          >
         </div>
       </div>
     </header>
     <!-- * Header end -->
+
+    <script src="./assets/js/app.js"></script>
   </body>
 </html>

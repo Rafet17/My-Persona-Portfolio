@@ -5,11 +5,12 @@
   background-color: $color-bg;
   .container {
     .row {
-        padding: 20px 0;
+      padding: 20px 0;
       @include flex(space-between, center);
       .logo {
-        h4 {
+        a {
           font-size: 30px;
+          font-weight: 600;
           color: $color-white;
           cursor: pointer;
           @include transition();
@@ -21,7 +22,7 @@
           h4 {
             @include hover(#80db66);
           }
-          span{
+          span {
             @include hover(#fff);
           }
         }
@@ -32,29 +33,163 @@
         .navList {
           @include flex(space-between, center);
           gap: 20px;
-          .navItem{
-            a{
-                text-transform: capitalize;
-                font-size: 17px;
-                font-weight: 600;
-                @include transition();
-                &:hover{
-                    @include hover(#80db66);
-                }
+          .navItem {
+            a {
+              text-transform: capitalize;
+              font-size: 17px;
+              font-weight: 600;
+              @include transition();
+              &:hover {
+                @include hover(#80db66);
+              }
             }
           }
         }
-        .cvDownload{
-            a{
-                @include btn(transparent, #fff, 1px solid #80db66 );
-                @include transition();
-                text-transform: uppercase;
-                &:hover{
-                    @include btnHover (#80db66, #25262f);
-                }
+        .cvDownload {
+          a {
+            @include btn(transparent, #fff, 1px solid #80db66);
+            @include transition();
+            text-transform: uppercase;
+            &:hover {
+              @include btnHover(#80db66, #25262f);
             }
+          }
+        }
+        .bar {
+          font-size: 20px;
+          color: $color-main;
+          display: none;
         }
       }
     }
   }
+  .menuBar {
+    transform: translateX(-400px);
+    width: 300px;
+    background-color: $color-main;
+      height: 100vh;
+    position: absolute;
+    position: fixed;
+    top: 0;
+    @include transition();
+    .exit {
+      color: $color-white;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      font-size: 30px;
+    }
+    .menuList {
+      @include flex(none, none);
+      flex-direction: column;
+      gap: 20px;
+      padding: 90px 30px 25px;
+      
+      li {
+        a {
+          text-transform: capitalize;
+          font-weight: 600;
+        }
+      }
+    }
+    h5 {
+      padding: 0 30px;
+      margin-bottom: 15px;
+      font-size: 20px;
+      color: $color-white;
+      text-transform: capitalize;
+    }
+    .socialList {
+      @include flex(none, none);
+      padding: 0 30px;
+      gap: 20px;
+      position: absolute;
+      z-index: 1;
+      .socialItem {
+        a {
+          i {
+            font-size: 17px;
+            background-color: #1877f2;
+            border-radius: 100%;
+            padding: 15px 16px;
+          }
+        }
+        &:nth-child(2) a i {
+          background-color: #405de6;
+        }
+        &:nth-child(3) a i {
+          background-color: #0077b5;
+        }
+      }
+    }
+    &.active{
+      transform: translateX(0);
+    }
+  }
+}
+
+// ! 1200px
+@media (max-width: 1200px) {
+  .header {
+    .container {
+      .row {
+        .navBar {
+          .navList {
+            .navItem {
+              a {
+                font-size: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ! 992px
+@media (max-width: 992px) {
+  .header{
+    .container{
+      .row{
+        .navBar{
+          .navList{
+            display: none;
+          }
+          .bar{
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ! 425px
+@media (max-width: 425px){
+.header{
+  .container{
+    .row{
+      .navBar{
+        .cvDownload{
+          display: none;
+        }
+      }
+    }
+  }
+  .menuBar{
+    .cvDownload {
+      padding-top: 70px;
+      padding-left: 30px;
+      a {
+        @include btn(transparent, #25262f, 1px solid #25262f);
+        @include transition();
+        text-transform: uppercase;
+        &:hover {
+          @include btnHover(#80db66, #25262f);
+        }
+      }
+    }
+  }
+}
 }
