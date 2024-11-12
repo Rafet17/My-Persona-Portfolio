@@ -31,6 +31,16 @@
           white-space: nowrap;
           overflow: hidden;
           min-height: 60px;
+          margin-bottom: 20px;
+        }
+        a{
+            @include btn(#80db66, #25262f, 1px solid #80db66);
+            @include transition();
+            border-radius: 4px;
+            margin-bottom: 50px;
+            &:hover{
+                @include btnHover(transparent, #80db66);
+            }
         }
       }
       .secImg {
@@ -47,6 +57,110 @@
 
 // ! 1024px
 @media (max-width: 1024px){
-
+.hero{
+    .container{
+        .row{
+            .secCap{
+                h1{
+                    font-size: 80px;
+                }
+            }
+        }
+    }
 }
+}
+
+// ! 992px
+@media (max-width: 992px){
+    .hero{
+        .container{
+            .row{
+                flex-direction: column;
+                .secCap{
+                    text-align: center;
+                }
+                .secImg{
+                    margin-top: 30px;
+                    max-width: 60%;
+                }
+            }
+        }
+    }
+}
+
+// ! 768px
+@media (max-width: 768px){
+    .hero{
+        .container{
+            .row{
+                .secCap{
+                    h1{
+                        font-size: 60px;
+                    }
+                    h2{
+                        font-size: 28px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ! 545px
+@media (max-width: 545px){
+    .hero{
+        .container{
+            .row{
+                .secCap{
+                    h1{
+                        font-size: 50px;
+                    }
+                    h2{
+                        font-size: 28px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ! 455px
+@media (max-width: 455px){
+    .hero{
+        .container{
+            .row{
+                .secCap{
+                    h1{
+                        font-size: 40px;
+                    }
+                    h2{
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ! 365px
+@media (max-width: 365px){
+    .hero{
+        .container{
+            .row{
+                .secCap{
+                    h4{
+                        font-size: 18px;
+                    }
+                    h1{
+                        font-size: 30px;
+                    }
+                    h2{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 

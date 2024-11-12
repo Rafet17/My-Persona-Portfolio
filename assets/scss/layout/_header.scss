@@ -67,10 +67,11 @@
     transform: translateX(-400px);
     width: 300px;
     background-color: $color-main;
-      height: 100vh;
+    height: 100vh;
     position: absolute;
     position: fixed;
     top: 0;
+    z-index: 1;
     @include transition();
     .exit {
       color: $color-white;
@@ -84,7 +85,7 @@
       flex-direction: column;
       gap: 20px;
       padding: 90px 30px 25px;
-      
+
       li {
         a {
           text-transform: capitalize;
@@ -125,10 +126,10 @@
         }
       }
     }
-    .cvDownload{
+    .cvDownload {
       display: none;
     }
-    &.active{
+    &.active {
       transform: translateX(0);
     }
   }
@@ -155,14 +156,14 @@
 
 // ! 992px
 @media (max-width: 992px) {
-  .header{
-    .container{
-      .row{
-        .navBar{
-          .navList{
+  .header {
+    .container {
+      .row {
+        .navBar {
+          .navList {
             display: none;
           }
-          .bar{
+          .bar {
             display: block;
           }
         }
@@ -172,30 +173,63 @@
 }
 
 // ! 425px
-@media (max-width: 425px){
-.header{
-  .container{
-    .row{
-      .navBar{
-        .cvDownload{
-          display: none;
+@media (max-width: 425px) {
+  .header {
+    .container {
+      .row {
+        .navBar {
+          .cvDownload {
+            display: none;
+          }
         }
       }
     }
-  }
-  .menuBar{
-    .cvDownload {
-      padding-top: 70px;
-      padding-left: 30px;
-      a {
-        @include btn(transparent, #25262f, 1px solid #25262f);
-        @include transition();
-        text-transform: uppercase;
-        &:hover {
-          @include btnHover(#80db66, #25262f);
+    .menuBar {
+      width: 100%;
+      .exit{
+        right: 50px;
+      }
+      .cvDownload {
+        padding-top: 70px;
+        padding-left: 30px;
+        a {
+          @include btn(transparent, #25262f, 1px solid #25262f);
+          @include transition();
+          text-transform: uppercase;
+          &:hover {
+            @include btnHover(#80db66, #25262f);
+          }
         }
       }
     }
   }
 }
+
+// ! 308px
+@media (max-width: 308px) {
+  .header {
+    .menuBar {
+      width: 100%;
+      .exit{
+        right: 30px;
+      }
+      .socialList {
+        @include flex(none, none);
+        padding: 0 30px;
+        gap: 15px;
+        position: absolute;
+        z-index: 1;
+        .socialItem {
+          a {
+            i {
+              font-size: 15px;
+              background-color: #1877f2;
+              border-radius: 100%;
+              padding: 12px 13px;
+            }
+          }
+        }
+      }
+    }
+  }
 }

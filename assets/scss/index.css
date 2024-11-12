@@ -17,6 +17,7 @@ ul {
 
 body {
   font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
 }
 
 .container {
@@ -76,6 +77,7 @@ body {
   color: #fff;
   border: 1px solid #80db66;
   padding: 10px 14px;
+  text-transform: uppercase;
   transition: all 0.3s ease;
   text-transform: uppercase;
 }
@@ -96,6 +98,7 @@ body {
   position: absolute;
   position: fixed;
   top: 0;
+  z-index: 1;
   transition: all 0.3s ease;
 }
 .header .menuBar .exit {
@@ -172,6 +175,12 @@ body {
   .header .container .row .navBar .cvDownload {
     display: none;
   }
+  .header .menuBar {
+    width: 100%;
+  }
+  .header .menuBar .exit {
+    right: 50px;
+  }
   .header .menuBar .cvDownload {
     padding-top: 70px;
     padding-left: 30px;
@@ -181,12 +190,36 @@ body {
     color: #25262f;
     border: 1px solid #25262f;
     padding: 10px 14px;
+    text-transform: uppercase;
     transition: all 0.3s ease;
     text-transform: uppercase;
   }
   .header .menuBar .cvDownload a:hover {
     background-color: #80db66;
     color: #25262f;
+  }
+}
+@media (max-width: 308px) {
+  .header .menuBar {
+    width: 100%;
+  }
+  .header .menuBar .exit {
+    right: 30px;
+  }
+  .header .menuBar .socialList {
+    display: flex;
+    justify-content: none;
+    align-items: none;
+    padding: 0 30px;
+    gap: 15px;
+    position: absolute;
+    z-index: 1;
+  }
+  .header .menuBar .socialList .socialItem a i {
+    font-size: 15px;
+    background-color: #1877f2;
+    border-radius: 100%;
+    padding: 12px 13px;
   }
 }
 .hero {
@@ -221,6 +254,21 @@ body {
   white-space: nowrap;
   overflow: hidden;
   min-height: 60px;
+  margin-bottom: 20px;
+}
+.hero .container .row .secCap a {
+  background-color: #80db66;
+  color: #25262f;
+  border: 1px solid #80db66;
+  padding: 10px 14px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  margin-bottom: 50px;
+}
+.hero .container .row .secCap a:hover {
+  background-color: transparent;
+  color: #80db66;
 }
 .hero .container .row .secImg {
   max-width: 100%;
@@ -228,4 +276,57 @@ body {
 .hero .container .row .secImg img {
   transform: rotateY(180deg);
   width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .hero .container .row .secCap h1 {
+    font-size: 80px;
+  }
+}
+@media (max-width: 992px) {
+  .hero .container .row {
+    flex-direction: column;
+  }
+  .hero .container .row .secCap {
+    text-align: center;
+  }
+  .hero .container .row .secImg {
+    margin-top: 30px;
+    max-width: 60%;
+  }
+}
+@media (max-width: 768px) {
+  .hero .container .row .secCap h1 {
+    font-size: 60px;
+  }
+  .hero .container .row .secCap h2 {
+    font-size: 28px;
+  }
+}
+@media (max-width: 545px) {
+  .hero .container .row .secCap h1 {
+    font-size: 50px;
+  }
+  .hero .container .row .secCap h2 {
+    font-size: 28px;
+  }
+}
+@media (max-width: 455px) {
+  .hero .container .row .secCap h1 {
+    font-size: 40px;
+  }
+  .hero .container .row .secCap h2 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 365px) {
+  .hero .container .row .secCap h4 {
+    font-size: 18px;
+  }
+  .hero .container .row .secCap h1 {
+    font-size: 30px;
+  }
+  .hero .container .row .secCap h2 {
+    font-size: 20px;
+  }
 }/*# sourceMappingURL=index.css.map */
