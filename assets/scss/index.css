@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 @import url("https://fonts.cdnfonts.com/css/ica-rubrik-black");
 @import url("https://fonts.cdnfonts.com/css/poppins");
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +16,10 @@ a {
 ul {
   list-style: none;
   color: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -627,4 +632,59 @@ body {
   .hero .container .row .secCap h2 {
     font-size: 20px;
   }
+}
+.myWorksPage {
+  background: url(../images/home/slider-bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0;
+}
+.myWorksPage .container .secTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 80px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #eee;
+}
+.myWorksPage .container .secTitle h4 {
+  color: #fff;
+  font-size: 25px;
+}
+.myWorksPage .container .secTitle ul {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  gap: 20px;
+}
+.myWorksPage .container .secTitle ul .active {
+  font-weight: 700;
+}
+.myWorksPage .container .row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -moz-column-gap: 90px;
+       column-gap: 90px;
+  row-gap: 70px;
+}
+.myWorksPage .container .row .cardContainer {
+  perspective: 50em;
+}
+.myWorksPage .container .row .card {
+  position: relative;
+  width: 320px;
+  height: 200px;
+  color: #fff;
+  transform: rotateY(30deg) rotateX(15deg);
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+.myWorksPage .container .row .card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.myWorksPage .container .row .card:hover {
+  transform: rotateY(-30deg) rotateX(-15deg);
 }/*# sourceMappingURL=index.css.map */

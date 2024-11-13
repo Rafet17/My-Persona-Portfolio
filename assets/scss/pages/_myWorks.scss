@@ -1,0 +1,58 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+
+.myWorksPage {
+  background: url(../images/home/slider-bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0;
+  .container {
+    .secTitle {
+      @include flex(space-between, center);
+      margin-bottom: 80px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid #eee;
+      h4 {
+        color: $color-white;
+        font-size: 25px;
+      }
+      ul {
+        @include flex(none, center);
+        gap: 20px;
+        .active{
+            font-weight: 700;
+        }
+      }
+    }
+    .row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 90px;
+      row-gap: 70px;
+      .cardContainer {
+        perspective: 50em;
+      }
+
+      .card {
+        position: relative;
+        width: 320px;
+        height: 200px;
+        color: #fff;
+        transform: rotateY(30deg) rotateX(15deg);
+        transform-style: preserve-3d;
+        transition: transform 1s;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 10px;
+        }
+
+        &:hover {
+          transform: rotateY(-30deg) rotateX(-15deg);
+        }
+      }
+    }
+  }
+}
