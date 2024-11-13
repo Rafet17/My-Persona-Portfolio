@@ -32,27 +32,175 @@
       row-gap: 70px;
       .cardContainer {
         perspective: 50em;
+        .card {
+            position: relative;
+            width: 320px;
+            height: 200px;
+            color: #fff;
+            transform: rotateY(30deg) rotateX(15deg);
+            transform-style: preserve-3d;
+            transition: transform 1s;
+    
+            img {
+              width: 100%;
+              height: 100%;
+              border-radius: 10px;
+            }
+    
+            &:hover {
+              transform: rotateY(-30deg) rotateX(-15deg);
+            }
+          }
       }
 
-      .card {
-        position: relative;
-        width: 320px;
-        height: 200px;
-        color: #fff;
-        transform: rotateY(30deg) rotateX(15deg);
-        transform-style: preserve-3d;
-        transition: transform 1s;
-
-        img {
-          width: 100%;
-          height: 100%;
-          border-radius: 10px;
-        }
-
-        &:hover {
-          transform: rotateY(-30deg) rotateX(-15deg);
-        }
-      }
+      
     }
   }
+}
+
+// ! Responsive
+
+// ! 1024px
+@media (max-width: 1024px){
+    .myWorksPage{
+        .container{
+            .row{
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+    }
+}
+
+// ! 815px
+@media (max-width: 815px){
+    .myWorksPage{
+        .container{
+            .row{
+                grid-template-columns: repeat(2,1fr);
+                column-gap: 30px;
+            }
+        }
+    }
+}
+
+// ! 768px
+@media (max-width: 768px){
+    .myWorksPage{
+        .container{
+            .row{
+                grid-template-columns: repeat(2,1fr);
+                column-gap: 30px;
+                .cardContainer{
+                    .card{
+                        width: 280px;
+                        height: 150px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ! 660px
+@media (max-width: 660px){
+    .myWorksPage{
+        .container{
+            .row{
+                grid-template-columns: repeat(2,1fr);
+                column-gap: 30px;
+                .cardContainer{
+                    .card{
+                        width: 250px;
+                        height: 150px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ! 590px
+@media (max-width: 590px){
+    .myWorksPage{
+        .container{
+            .row{
+                grid-template-columns: repeat(2,1fr);
+                column-gap: 30px;
+                .cardContainer{
+                    .card{
+                        width: 220px;
+                        height: 150px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ! 525px
+@media (max-width: 525px){
+    .myWorksPage{
+        .container{
+            .secTitle{
+                h4{
+                    font-size: 20px;
+                }
+                ul{
+                    li{
+                        font-size: 15px;
+                    }
+                }
+            }
+            .row{
+                grid-template-columns: 1fr;
+                column-gap: 30px;
+                .cardContainer{
+                    .card{
+                        width: 320px;
+                        height: 200px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// ! 455px
+@media (max-width: 455px){
+    .myWorksPage{
+        .container{
+            .secTitle{
+                flex-direction: column;
+            }
+            .row{
+                grid-template-columns: 1fr;
+                column-gap: 30px;
+                .cardContainer{
+                    .card{
+                        width: 320px;
+                        height: 200px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ! 355px
+@media (max-width: 355px){
+    .myWorksPage{
+        .container{
+            .row{
+                grid-template-columns: 1fr;
+                column-gap: 30px;
+                .cardContainer{
+                    .card{
+                        width: 220px;
+                        height: 150px;
+                    }
+                }
+            }
+        }
+    }
 }

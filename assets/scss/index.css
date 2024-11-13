@@ -671,7 +671,7 @@ body {
 .myWorksPage .container .row .cardContainer {
   perspective: 50em;
 }
-.myWorksPage .container .row .card {
+.myWorksPage .container .row .cardContainer .card {
   position: relative;
   width: 320px;
   height: 200px;
@@ -680,11 +680,99 @@ body {
   transform-style: preserve-3d;
   transition: transform 1s;
 }
-.myWorksPage .container .row .card img {
+.myWorksPage .container .row .cardContainer .card img {
   width: 100%;
   height: 100%;
   border-radius: 10px;
 }
-.myWorksPage .container .row .card:hover {
+.myWorksPage .container .row .cardContainer .card:hover {
   transform: rotateY(-30deg) rotateX(-15deg);
+}
+
+@media (max-width: 1024px) {
+  .myWorksPage .container .row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 815px) {
+  .myWorksPage .container .row {
+    grid-template-columns: repeat(2, 1fr);
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .myWorksPage .container .row {
+    grid-template-columns: repeat(2, 1fr);
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
+  .myWorksPage .container .row .cardContainer .card {
+    width: 280px;
+    height: 150px;
+  }
+}
+@media (max-width: 660px) {
+  .myWorksPage .container .row {
+    grid-template-columns: repeat(2, 1fr);
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
+  .myWorksPage .container .row .cardContainer .card {
+    width: 250px;
+    height: 150px;
+  }
+}
+@media (max-width: 590px) {
+  .myWorksPage .container .row {
+    grid-template-columns: repeat(2, 1fr);
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
+  .myWorksPage .container .row .cardContainer .card {
+    width: 220px;
+    height: 150px;
+  }
+}
+@media (max-width: 525px) {
+  .myWorksPage .container .secTitle h4 {
+    font-size: 20px;
+  }
+  .myWorksPage .container .secTitle ul li {
+    font-size: 15px;
+  }
+  .myWorksPage .container .row {
+    grid-template-columns: 1fr;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
+  .myWorksPage .container .row .cardContainer .card {
+    width: 320px;
+    height: 200px;
+  }
+}
+@media (max-width: 455px) {
+  .myWorksPage .container .secTitle {
+    flex-direction: column;
+  }
+  .myWorksPage .container .row {
+    grid-template-columns: 1fr;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
+  .myWorksPage .container .row .cardContainer .card {
+    width: 320px;
+    height: 200px;
+  }
+}
+@media (max-width: 355px) {
+  .myWorksPage .container .row {
+    grid-template-columns: 1fr;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
+  .myWorksPage .container .row .cardContainer .card {
+    width: 220px;
+    height: 150px;
+  }
 }/*# sourceMappingURL=index.css.map */
