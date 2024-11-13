@@ -111,7 +111,7 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 60px;
-      .aboutCap{
+      .aboutCap {
         .secTitle {
           h5 {
             @include title();
@@ -145,19 +145,18 @@
               &.bold {
                 font-weight: 700;
               }
-  
-              a{
-                  color: #b0aac0;
+
+              a {
+                color: #b0aac0;
               }
             }
           }
         }
       }
-      .model{
+      .model {
         margin-top: -50px;
-        img{
+        img {
           width: 100%;
-          height: 100%;
         }
       }
     }
@@ -166,11 +165,143 @@
 
 // * About section end
 
+// * My works section start
+
+.myWorks {
+  background-color: #25262f;
+  padding: 100px 0;
+
+  &::before {
+    position: absolute;
+    width: min(1400px, 90vw);
+    top: 10%;
+    left: 50%;
+    height: 90%;
+    transform: translateX(-50%);
+    content: "";
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    pointer-events: none;
+  }
+  .container {
+    .secTitle {
+      text-align: center;
+      margin-bottom: 50px;
+      h5 {
+        @include title();
+      }
+      h2 {
+        font-size: 60px;
+        color: $color-white;
+        margin-bottom: 20px;
+      }
+      a {
+        @include btn(transparent, #fff, 1px solid #80db66);
+        @include transition();
+        &:hover {
+          @include btnHover(#80db66, #25262f);
+        }
+      }
+    }
+  }
+  .banner {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+
+    .slider {
+      position: absolute;
+      width: 200px;
+      height: 250px;
+      top: 10%;
+      left: calc(50% - 100px);
+      transform-style: preserve-3d;
+      transform: perspective(1000px);
+      animation: autoRun 20s linear infinite;
+      z-index: 2;
+
+      .item {
+        border: 4px solid #5b5b5c;
+        border-radius: 10px;
+        position: absolute;
+        inset: 0;
+        transform: rotateY(
+            calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
+          )
+          translateZ(550px);
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .content {
+      position: absolute;
+      bottom: 0;
+      left: 60%;
+      transform: translateX(-50%);
+      width: min(1400px, 100vw);
+      height: max-content;
+      padding-bottom: 100px;
+      @include flex(space-between, center);
+      flex-wrap: wrap;
+      z-index: 1;
+
+      .work {
+        font-family: "ICA Rubrik";
+        font-size: 226px;
+        color: #25283b;
+        position: relative;
+
+        &::after {
+          position: absolute;
+          inset: 0;
+          content: attr(data-content);
+          z-index: 2;
+          -webkit-text-stroke: 2px $color-white;
+          color: transparent;
+        }
+      }
+
+      .model {
+        background-image: url(../images/home/hacker\ man-Photoroom.png);
+        width: 100%;
+        height: 75vh;
+        position: absolute;
+        bottom: 0;
+        left: -10%;
+        background-size: auto 130%;
+        background-repeat: no-repeat;
+        background-position: top center;
+        z-index: 1;
+      }
+    }
+
+    @keyframes autoRun {
+      from {
+        transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+      }
+      to {
+        transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+      }
+    }
+  }
+}
+
+// * My works section end
+
 // ! Responsive design
 
 // ! 1024px
 @media (max-width: 1024px) {
   // * hero section start
+
   .hero {
     .container {
       .row {
@@ -182,9 +313,11 @@
       }
     }
   }
+
   // * hero section end
 
   // * card section start
+
   .cardSection {
     .container {
       .row {
@@ -208,12 +341,66 @@
       }
     }
   }
+
   // * card section end
+
+  // * about section start
+
+  .about {
+    .container {
+      .row {
+        .aboutCap {
+          .secTitle {
+            h2 {
+              font-size: 40px;
+            }
+            p {
+              font-size: 15px;
+            }
+          }
+          .infoWrapper {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+      }
+    }
+  }
+
+  // * about section end
+
+  // * my works section start
+
+  .banner {
+    .slider {
+      width: 160px;
+      height: 200px;
+      left: calc(50% - 80px);
+
+      .item {
+        transform: rotateY(
+            calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
+          )
+          translateZ(300px);
+      }
+    }
+
+    .content {
+      .work {
+        text-align: center;
+        width: 100%;
+        text-shadow: 0 10px 20px #000;
+        font-size: 7em;
+      }
+    }
+  }
+
+  // * my works section end
 }
 
 // ! 992px
 @media (max-width: 992px) {
   // * hero section start
+
   .hero {
     .container {
       .row {
@@ -228,9 +415,11 @@
       }
     }
   }
+
   // * hero section end
 
   // * card section start
+
   .cardSection {
     .container {
       .row {
@@ -238,11 +427,31 @@
       }
     }
   }
+
   // * card section end
+
+  // * about section start
+
+  .about {
+    .container {
+      .row {
+        grid-template-columns: 1fr;
+        .aboutCap {
+          .infoWrapper {
+            grid-template-columns: repeat(4, 1fr);
+          }
+        }
+      }
+    }
+  }
+
+  // * about section end
 }
 
 // ! 768px
 @media (max-width: 768px) {
+  // * hero section start
+
   .hero {
     .container {
       .row {
@@ -257,11 +466,39 @@
       }
     }
   }
+
+  // * hero section end
+
+// * My works section start
+
+.banner {
+  .slider {
+    width: 100px;
+    height: 150px;
+    left: calc(50% - 50px);
+
+    .item {
+      transform: rotateY(
+          calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
+        )
+        translateZ(180px);
+    }
+  }
+
+  .content {
+    .work {
+      font-size: 5em;
+    }
+  }
+}
+
+// * My works section end
 }
 
 // ! 545px
 @media (max-width: 545px) {
   // * hero section start
+
   .hero {
     .container {
       .row {
@@ -276,9 +513,11 @@
       }
     }
   }
+
   // * hero section end
 
   // * card section start
+
   .cardSection {
     .container {
       .row {
@@ -286,11 +525,31 @@
       }
     }
   }
+
   // * card section end
+
+  // * about section start
+
+  .about {
+    .container {
+      .row {
+        .aboutCap {
+          .infoWrapper {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+      }
+    }
+  }
+
+  // * about section end
 }
+
 
 // ! 455px
 @media (max-width: 455px) {
+  // * hero section start
+
   .hero {
     .container {
       .row {
@@ -305,6 +564,26 @@
       }
     }
   }
+
+  // * hero section end
+
+  // * about section start
+  .about {
+    .container {
+      .row {
+        .aboutCap {
+          .infoWrapper {
+            .singleInfo {
+              h6 {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // * about section end
 }
 
 // ! 365px

@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.cdnfonts.com/css/ica-rubrik-black");
+@import url("https://fonts.cdnfonts.com/css/poppins");
 * {
   margin: 0;
   padding: 0;
@@ -363,7 +365,131 @@ body {
 }
 .about .container .row .model img {
   width: 100%;
+}
+
+.myWorks {
+  background-color: #25262f;
+  padding: 100px 0;
+}
+.myWorks::before {
+  position: absolute;
+  width: min(1400px, 90vw);
+  top: 10%;
+  left: 50%;
+  height: 90%;
+  transform: translateX(-50%);
+  content: "";
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  pointer-events: none;
+}
+.myWorks .container .secTitle {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.myWorks .container .secTitle h5 {
+  font-size: 18px;
+  letter-spacing: 7px;
+  color: #80db66;
+  text-transform: uppercase;
+}
+.myWorks .container .secTitle h2 {
+  font-size: 60px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.myWorks .container .secTitle a {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #80db66;
+  padding: 10px 14px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+.myWorks .container .secTitle a:hover {
+  background-color: #80db66;
+  color: #25262f;
+}
+.myWorks .banner {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+.myWorks .banner .slider {
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  top: 10%;
+  left: calc(50% - 100px);
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  animation: autoRun 20s linear infinite;
+  z-index: 2;
+}
+.myWorks .banner .slider .item {
+  border: 4px solid #5b5b5c;
+  border-radius: 10px;
+  position: absolute;
+  inset: 0;
+  transform: rotateY(calc((var(--position) - 1) * 360 / var(--quantity) * 1deg)) translateZ(550px);
+}
+.myWorks .banner .slider .item img {
+  width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.myWorks .banner .content {
+  position: absolute;
+  bottom: 0;
+  left: 60%;
+  transform: translateX(-50%);
+  width: min(1400px, 100vw);
+  height: -moz-max-content;
+  height: max-content;
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: 1;
+}
+.myWorks .banner .content .work {
+  font-family: "ICA Rubrik";
+  font-size: 226px;
+  color: #25283b;
+  position: relative;
+}
+.myWorks .banner .content .work::after {
+  position: absolute;
+  inset: 0;
+  content: attr(data-content);
+  z-index: 2;
+  -webkit-text-stroke: 2px #fff;
+  color: transparent;
+}
+.myWorks .banner .content .model {
+  background-image: url(../images/home/hacker\ man-Photoroom.png);
+  width: 100%;
+  height: 75vh;
+  position: absolute;
+  bottom: 0;
+  left: -10%;
+  background-size: auto 130%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  z-index: 1;
+}
+@keyframes autoRun {
+  from {
+    transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+  }
+  to {
+    transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+  }
 }
 
 @media (max-width: 1024px) {
@@ -383,6 +509,29 @@ body {
   .cardSection .container .row .card .cap p {
     font-size: 17px;
   }
+  .about .container .row .aboutCap .secTitle h2 {
+    font-size: 40px;
+  }
+  .about .container .row .aboutCap .secTitle p {
+    font-size: 15px;
+  }
+  .about .container .row .aboutCap .infoWrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .banner .slider {
+    width: 160px;
+    height: 200px;
+    left: calc(50% - 80px);
+  }
+  .banner .slider .item {
+    transform: rotateY(calc((var(--position) - 1) * 360 / var(--quantity) * 1deg)) translateZ(300px);
+  }
+  .banner .content .work {
+    text-align: center;
+    width: 100%;
+    text-shadow: 0 10px 20px #000;
+    font-size: 7em;
+  }
 }
 @media (max-width: 992px) {
   .hero .container .row {
@@ -398,6 +547,12 @@ body {
   .cardSection .container .row {
     grid-template-columns: repeat(2, 1fr);
   }
+  .about .container .row {
+    grid-template-columns: 1fr;
+  }
+  .about .container .row .aboutCap .infoWrapper {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 @media (max-width: 768px) {
   .hero .container .row .secCap h1 {
@@ -405,6 +560,17 @@ body {
   }
   .hero .container .row .secCap h2 {
     font-size: 28px;
+  }
+  .banner .slider {
+    width: 100px;
+    height: 150px;
+    left: calc(50% - 50px);
+  }
+  .banner .slider .item {
+    transform: rotateY(calc((var(--position) - 1) * 360 / var(--quantity) * 1deg)) translateZ(180px);
+  }
+  .banner .content .work {
+    font-size: 5em;
   }
 }
 @media (max-width: 545px) {
@@ -417,6 +583,9 @@ body {
   .cardSection .container .row {
     grid-template-columns: 1fr;
   }
+  .about .container .row .aboutCap .infoWrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media (max-width: 455px) {
   .hero .container .row .secCap h1 {
@@ -424,6 +593,9 @@ body {
   }
   .hero .container .row .secCap h2 {
     font-size: 24px;
+  }
+  .about .container .row .aboutCap .infoWrapper .singleInfo h6 {
+    font-size: 12px;
   }
 }
 @media (max-width: 365px) {
