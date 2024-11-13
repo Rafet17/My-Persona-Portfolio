@@ -30,6 +30,9 @@ body {
 
 .header {
   background-color: #25262f;
+  position: fixed;
+  width: 100%;
+  z-index: 8;
 }
 .header .container .row {
   padding: 20px 0;
@@ -91,6 +94,8 @@ body {
   font-size: 20px;
   color: #80db66;
   display: none;
+  background-color: transparent;
+  border: none;
 }
 .header .menuBar {
   transform: translateX(-400px);
@@ -100,7 +105,7 @@ body {
   position: absolute;
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 9;
   transition: all 0.3s ease;
 }
 .header .menuBar .exit {
@@ -518,19 +523,24 @@ body {
   .about .container .row .aboutCap .infoWrapper {
     grid-template-columns: repeat(2, 1fr);
   }
-  .banner .slider {
+  .myWorks .banner .slider {
     width: 160px;
     height: 200px;
     left: calc(50% - 80px);
   }
-  .banner .slider .item {
+  .myWorks .banner .slider .item {
     transform: rotateY(calc((var(--position) - 1) * 360 / var(--quantity) * 1deg)) translateZ(300px);
   }
-  .banner .content .work {
+  .myWorks .banner .content .work {
     text-align: center;
     width: 100%;
+    right: 10%;
+    top: -100px;
     text-shadow: 0 10px 20px #000;
     font-size: 7em;
+  }
+  .myWorks .banner .content .model {
+    bottom: 20%;
   }
 }
 @media (max-width: 992px) {
@@ -561,15 +571,18 @@ body {
   .hero .container .row .secCap h2 {
     font-size: 28px;
   }
-  .banner .slider {
+  .myWorks {
+    padding: 20px 0;
+  }
+  .myWorks .banner .slider {
     width: 100px;
     height: 150px;
     left: calc(50% - 50px);
   }
-  .banner .slider .item {
+  .myWorks .banner .slider .item {
     transform: rotateY(calc((var(--position) - 1) * 360 / var(--quantity) * 1deg)) translateZ(180px);
   }
-  .banner .content .work {
+  .myWorks .banner .content .work {
     font-size: 5em;
   }
 }
@@ -596,6 +609,12 @@ body {
   }
   .about .container .row .aboutCap .infoWrapper .singleInfo h6 {
     font-size: 12px;
+  }
+  .myWorks {
+    padding: 20px 0;
+  }
+  .myWorks .container .secTitle h2 {
+    font-size: 40px;
   }
 }
 @media (max-width: 365px) {

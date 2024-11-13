@@ -3,6 +3,9 @@
 
 .header {
   background-color: $color-bg;
+  position: fixed;
+  width: 100%;
+  z-index: 8;
   .container {
     .row {
       padding: 20px 0;
@@ -59,6 +62,8 @@
           font-size: 20px;
           color: $color-main;
           display: none;
+          background-color: transparent;
+          border: none;
         }
       }
     }
@@ -71,7 +76,7 @@
     position: absolute;
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 9;
     @include transition();
     .exit {
       color: $color-white;
