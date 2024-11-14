@@ -656,6 +656,9 @@ body {
   .myWorks {
     padding: 20px 0;
   }
+  .myWorks .container .secTitle h2 {
+    font-size: 40px;
+  }
   .myWorks .banner .slider {
     width: 100px;
     height: 150px;
@@ -669,6 +672,9 @@ body {
   }
   .myWorks .banner .content .model {
     bottom: 50%;
+  }
+  .skills .container .secTitle h2 {
+    font-size: 40px;
   }
   .skills .container .row {
     grid-template-columns: repeat(2, 1fr);
@@ -703,6 +709,9 @@ body {
   }
   .myWorks .container .secTitle h2 {
     font-size: 40px;
+  }
+  .skills .container .secTitle h2 {
+    font-size: 30px;
   }
   .skills .container .row {
     grid-template-columns: 1fr;
@@ -860,5 +869,172 @@ body {
   .myWorksPage .container .row .cardContainer .card {
     width: 220px;
     height: 150px;
+  }
+}
+.contact {
+  background-color: #25262f;
+  padding: 100px 0;
+}
+.contact .container .secTitle {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.contact .container .secTitle h5 {
+  font-size: 18px;
+  letter-spacing: 7px;
+  color: #80db66;
+  text-transform: uppercase;
+}
+.contact .container .secTitle h2 {
+  font-size: 50px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+.contact .container .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: none;
+  gap: 35px;
+}
+.contact .container .row .info .infoList li {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+.contact .container .row .info .infoList li .icon {
+  background-color: #80db66;
+  width: 72px;
+  height: 72px;
+  line-height: 72px;
+  border-radius: 50%;
+  text-align: center;
+}
+.contact .container .row .info .infoList li .icon i {
+  font-size: 18px;
+}
+.contact .container .row .info .infoList li .text h4 {
+  font-size: 24px;
+}
+.contact .container .row .info .infoList li .text p {
+  color: #b0aac0;
+}
+.contact .container .row .info .infoList li .text a {
+  color: #b0aac0;
+}
+.contact .container .row .info .infoList li .text a:hover {
+  color: #fff;
+}
+.contact .container .row .form .formInfo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+.contact .container .row .form .formInfo input {
+  width: 100%;
+  font-size: 18px;
+  background-color: #2d2e36;
+  border: 1px solid #474747;
+  border-radius: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 70px;
+}
+.contact .container .row .form .formInfo input:focus {
+  border-color: #80db66;
+  outline: none;
+}
+.contact .container .row .form select {
+  margin-top: 15px;
+  width: 100%;
+  font-size: 18px;
+  background-color: #2d2e36;
+  border: 1px solid #474747;
+  border-radius: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 13px;
+  color: #7d7c7c;
+}
+.contact .container .row .form textarea {
+  margin-top: 15px;
+  width: 100%;
+  height: 150px;
+  resize: none;
+  background-color: #2d2e36;
+  border: 1px solid #474747;
+  border-radius: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 13px;
+  color: #7d7c7c;
+  font-size: 18px;
+}
+.contact .container .row .form textarea:focus {
+  border-color: #80db66;
+  outline: none;
+}
+.contact .container .row .form button {
+  background-color: #80db66;
+  color: #25262f;
+  border: 1px solid #80db66;
+  padding: 10px 14px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 15px 35px;
+  margin-top: 15px;
+}
+.contact .container .row .form button:hover {
+  background-color: transparent;
+  color: #80db66;
+}
+.contact .container .map {
+  margin-top: 20px;
+}
+
+@media (max-width: 992px) {
+  .contact .container .row {
+    flex-direction: column;
+  }
+  .contact .container .row .info .infoList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .contact .container .row .info .infoList li {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .contact .container .row {
+    flex-direction: column;
+  }
+  .contact .container .row .info .infoList {
+    display: flex;
+    justify-content: none;
+    align-items: start;
+    flex-direction: column;
+  }
+  .contact .container .row .info .infoList li {
+    flex-direction: unset;
+    text-align: left;
+  }
+}
+@media (max-width: 575px) {
+  .contact .container .row .form .formInfo {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 350px) {
+  .contact .container .secTitle h2 {
+    font-size: 30px;
+  }
+  .contact .container .row .info .infoList li {
+    font-size: 12px;
   }
 }/*# sourceMappingURL=index.css.map */

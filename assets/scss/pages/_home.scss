@@ -579,6 +579,13 @@
 
   .myWorks {
     padding: 20px 0;
+    .container{
+      .secTitle{
+        h2{
+          font-size: 40px;
+        }
+      }
+    }
     .banner {
       .slider {
         width: 100px;
@@ -611,6 +618,11 @@
 
   .skills {
     .container {
+      .secTitle{
+        h2{
+          font-size: 40px;
+        }
+      }
       .row {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -729,6 +741,11 @@
 
   .skills {
     .container {
+      .secTitle{
+        h2{
+          font-size: 30px;
+        }
+      }
       .row {
         grid-template-columns: 1fr;
       }
