@@ -484,9 +484,8 @@ body {
 .myWorks .banner .content .model {
   background-image: url(../images/home/hacker\ man-Photoroom.png);
   width: 100%;
-  height: 75vh;
+  height: 300px;
   position: absolute;
-  bottom: 0;
   left: -10%;
   background-size: auto 130%;
   background-repeat: no-repeat;
@@ -500,6 +499,87 @@ body {
   to {
     transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
   }
+}
+
+.skills {
+  background-color: #25262f;
+  padding: 100px 0;
+}
+.skills .container .secTitle h5 {
+  font-size: 18px;
+  letter-spacing: 7px;
+  color: #80db66;
+  text-transform: uppercase;
+}
+.skills .container .secTitle h2 {
+  font-size: 50px;
+  color: #fff;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+.skills .container .row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 15px;
+}
+.skills .container .row .singleSkill {
+  cursor: pointer;
+  position: relative;
+  padding: 20px;
+  text-align: center;
+  overflow: hidden;
+}
+.skills .container .row .singleSkill h5 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 30px;
+  margin-bottom: 10px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+.skills .container .row .singleSkill h5:hover {
+  transform: rotateX(360deg);
+}
+.skills .container .row .singleSkill p {
+  color: #eee;
+  text-transform: capitalize;
+}
+.skills .container .row .singleSkill::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.4s ease;
+}
+.skills .container .row .singleSkill::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.4s ease 0.2s;
+}
+.skills .container .row .singleSkill .left-border {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 0;
+  background-color: #fff;
+  transition: height 0.4s ease 0.1s;
+}
+.skills .container .row .singleSkill:hover::before {
+  width: 100%;
+}
+.skills .container .row .singleSkill:hover::after {
+  width: 100%;
 }
 
 @media (max-width: 1024px) {
@@ -544,9 +624,6 @@ body {
     text-shadow: 0 10px 20px #000;
     font-size: 7em;
   }
-  .myWorks .banner .content .model {
-    bottom: 20%;
-  }
 }
 @media (max-width: 992px) {
   .hero .container .row {
@@ -590,6 +667,12 @@ body {
   .myWorks .banner .content .work {
     font-size: 5em;
   }
+  .myWorks .banner .content .model {
+    bottom: 50%;
+  }
+  .skills .container .row {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media (max-width: 545px) {
   .hero .container .row .secCap h1 {
@@ -620,6 +703,9 @@ body {
   }
   .myWorks .container .secTitle h2 {
     font-size: 40px;
+  }
+  .skills .container .row {
+    grid-template-columns: 1fr;
   }
 }
 @media (max-width: 365px) {
