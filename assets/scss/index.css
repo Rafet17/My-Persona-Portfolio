@@ -228,6 +228,111 @@ body {
     padding: 12px 13px;
   }
 }
+.footer {
+  background-color: #25262f;
+  padding: 50px 0;
+}
+.footer .row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+}
+.footer .row .leftSide .logo {
+  margin-bottom: 25px;
+}
+.footer .row .leftSide .logo a {
+  font-size: 40px;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.footer .row .leftSide .logo a span {
+  color: #80db66;
+}
+.footer .row .leftSide .logo:hover a {
+  color: #80db66;
+}
+.footer .row .leftSide .logo:hover span {
+  color: #fff;
+}
+.footer .row .leftSide .copyright p {
+  color: #fff;
+}
+.footer .row .leftSide .copyright p a {
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+.footer .row .leftSide .copyright p a:hover {
+  color: #80db66;
+}
+.footer .row .midSide h4 {
+  font-size: 30px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.footer .row .midSide form .wrapper {
+  border: 1px solid #474747;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10px;
+}
+.footer .row .midSide form .wrapper input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.footer .row .midSide form .wrapper button {
+  border: none;
+  background-color: transparent;
+  color: #80db66;
+  cursor: pointer;
+}
+.footer .row .rightSide h4 {
+  font-size: 30px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.footer .row .rightSide .socialList {
+  display: flex;
+  justify-content: none;
+  align-items: none;
+  gap: 20px;
+  position: absolute;
+  z-index: 1;
+}
+.footer .row .rightSide .socialList .socialItem a i {
+  font-size: 15px;
+  background-color: #1877f2;
+  border-radius: 100%;
+  padding: 12px 14px;
+  transition: all 0.3s ease;
+}
+.footer .row .rightSide .socialList .socialItem a i:hover {
+  transform: rotateY(180deg);
+}
+.footer .row .rightSide .socialList .socialItem:nth-child(2) a i {
+  background-color: #405de6;
+}
+.footer .row .rightSide .socialList .socialItem:nth-child(3) a i {
+  background-color: #0077b5;
+}
+.footer .row .rightSide .socialList .socialItem:nth-child(4) a i {
+  background-color: #054465;
+}
+
+@media (max-width: 992px) {
+  .footer .container .row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 455px) {
+  .footer .container .row {
+    grid-template-columns: 1fr;
+  }
+}
 .hero {
   background: url(../images/home/slider-bg.jpg);
   background-position: center center;
@@ -719,6 +824,9 @@ body {
   }
   .myWorks .banner .content .model {
     bottom: 50%;
+  }
+  .skills {
+    padding: 20px 0;
   }
   .skills .container .secTitle h2 {
     font-size: 40px;

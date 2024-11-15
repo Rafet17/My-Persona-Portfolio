@@ -1,0 +1,133 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+
+.footer {
+  background-color: $color-bg;
+  padding: 50px 0;
+  .row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    .leftSide {
+      .logo {
+        margin-bottom: 25px;
+        a {
+          font-size: 40px;
+          font-weight: 700;
+          color: $color-white;
+          cursor: pointer;
+          @include transition();
+          span {
+            color: $color-main;
+          }
+        }
+        &:hover {
+          a {
+            @include hover(#80db66);
+          }
+          span {
+            @include hover(#fff);
+          }
+        }
+      }
+      .copyright {
+        p {
+          color: $color-white;
+          a {
+            font-weight: 700;
+            @include transition();
+            &:hover {
+              @include hover(#80db66);
+            }
+          }
+        }
+      }
+    }
+    .midSide {
+      h4 {
+        font-size: 30px;
+        color: $color-white;
+        margin-bottom: 20px;
+      }
+      form {
+        .wrapper {
+          border: 1px solid #474747;
+          width: 200px;
+          @include flex(space-between, center);
+          padding: 15px 10px;
+          input {
+            border: none;
+            outline: none;
+            background-color: transparent;
+          }
+          button {
+            border: none;
+            background-color: transparent;
+            color: $color-main;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .rightSide{
+        h4{
+            font-size: 30px;
+            color: $color-white;
+            margin-bottom: 20px; 
+        }
+        .socialList {
+            @include flex(none, none);
+            gap: 20px;
+            position: absolute;
+            z-index: 1;
+            .socialItem {
+              a {
+                i {
+                  font-size: 15px;
+                  background-color: #1877f2;
+                  border-radius: 100%;
+                  padding: 12px 14px;
+                  @include transition();
+                  &:hover{
+                    transform: rotateY(180deg);
+                  }
+                }
+              }
+              &:nth-child(2) a i {
+                background-color: #405de6;
+              }
+              &:nth-child(3) a i {
+                background-color: #0077b5;
+              }
+              &:nth-child(4) a i {
+                background-color: #054465;
+              }
+            }
+          }
+    }
+  }
+}
+
+// ! Responsive
+
+// ! 992px
+@media (max-width: 992px){
+    .footer{
+        .container{
+            .row{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}
+
+// ! 455px
+@media (max-width: 455px){
+    .footer{
+        .container{
+            .row{
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}
