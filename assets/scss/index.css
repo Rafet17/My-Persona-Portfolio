@@ -454,7 +454,7 @@ body {
 }
 .myWorks .banner .content {
   position: absolute;
-  bottom: 0;
+  top: 50%;
   left: 60%;
   transform: translateX(-50%);
   width: min(1400px, 100vw);
@@ -582,6 +582,51 @@ body {
   width: 100%;
 }
 
+.services {
+  background-color: #212228;
+  padding: 100px 0;
+}
+.services .container .secTitle {
+  text-align: center;
+}
+.services .container .secTitle h5 {
+  font-size: 18px;
+  letter-spacing: 7px;
+  color: #80db66;
+  text-transform: uppercase;
+}
+.services .container .secTitle h2 {
+  font-size: 50px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.services .container .row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+.services .container .row .seviceCard {
+  background-color: #25262f;
+  padding: 65px 50px 55px;
+  display: flex;
+  justify-content: none;
+  align-items: none;
+  border-radius: 10px;
+  gap: 15px;
+}
+.services .container .row .seviceCard .icon i {
+  font-size: 50px;
+  color: #80db66;
+}
+.services .container .row .seviceCard .text h4 {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.services .container .row .seviceCard .text p {
+  color: #b0aac0;
+}
+
 @media (max-width: 1024px) {
   .hero .container .row .secCap h1 {
     font-size: 80px;
@@ -620,7 +665,6 @@ body {
     text-align: center;
     width: 100%;
     right: 10%;
-    top: -100px;
     text-shadow: 0 10px 20px #000;
     font-size: 7em;
   }
@@ -644,6 +688,9 @@ body {
   }
   .about .container .row .aboutCap .infoWrapper {
     grid-template-columns: repeat(4, 1fr);
+  }
+  .services .container .row {
+    grid-template-columns: 1fr;
   }
 }
 @media (max-width: 768px) {
@@ -715,6 +762,12 @@ body {
   }
   .skills .container .row {
     grid-template-columns: 1fr;
+  }
+  .services .container .secTitle h2 {
+    font-size: 40px;
+  }
+  .services .container .row .seviceCard {
+    flex-direction: column;
   }
 }
 @media (max-width: 365px) {

@@ -243,7 +243,8 @@
 
     .content {
       position: absolute;
-      bottom: 0;
+      // bottom: 0;
+      top: 50%;
       left: 60%;
       transform: translateX(-50%);
       width: min(1400px, 100vw);
@@ -319,8 +320,8 @@
       row-gap: 15px;
       .singleSkill {
         cursor: pointer;
-        position: relative; 
-        
+        position: relative;
+
         padding: 20px;
         text-align: center;
         overflow: hidden;
@@ -335,13 +336,12 @@
             transform: rotateX(360deg);
           }
         }
-      
+
         p {
           color: #eee;
           text-transform: capitalize;
         }
-      
-        
+
         &::before {
           content: "";
           position: absolute;
@@ -352,8 +352,7 @@
           background-color: $color-white;
           transition: width 0.4s ease;
         }
-      
-        
+
         &::after {
           content: "";
           position: absolute;
@@ -364,8 +363,7 @@
           background-color: $color-white;
           transition: width 0.4s ease 0.2s;
         }
-      
-        
+
         & .left-border {
           content: "";
           position: absolute;
@@ -376,24 +374,68 @@
           background-color: $color-white;
           transition: height 0.4s ease 0.1s;
         }
-      
-        
-        
-      
+
         &:hover::before {
-          width: 100%; 
+          width: 100%;
         }
-      
+
         &:hover::after {
-          width: 100%; 
+          width: 100%;
         }
       }
-      
     }
   }
 }
 
 // * Skill section end
+
+// * Services section start
+.services {
+  background-color: #212228;
+  padding: 100px 0;
+  .container {
+    .secTitle {
+      text-align: center;
+      h5 {
+        @include title();
+      }
+      h2{
+        font-size: 50px;
+        color: $color-white;
+        margin-bottom: 20px;
+      }
+    }
+    .row{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      .seviceCard{
+        background-color: $color-bg;
+        padding: 65px 50px 55px;
+        @include flex(none, none);
+        border-radius: 10px;
+        gap: 15px;
+        .icon{
+          i{
+            font-size: 50px;
+            color: $color-main;
+          }
+        }
+        .text{
+          h4{
+            color: $color-white;
+            font-size: 24px;
+            margin-bottom: 10px;
+          }
+          p{
+            color: #b0aac0;
+          }
+        }
+      }
+    }
+  }
+}
+// * Services section end
 
 // ! Responsive design
 
@@ -489,7 +531,6 @@
           text-align: center;
           width: 100%;
           right: 10%;
-          top: -100px;
           text-shadow: 0 10px 20px #000;
           font-size: 7em;
         }
@@ -552,6 +593,18 @@
   }
 
   // * about section end
+
+  // * services section start
+
+  .services{
+    .container{
+      .row{
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  // * services section end
 }
 
 // ! 768px
@@ -579,9 +632,9 @@
 
   .myWorks {
     padding: 20px 0;
-    .container{
-      .secTitle{
-        h2{
+    .container {
+      .secTitle {
+        h2 {
           font-size: 40px;
         }
       }
@@ -604,11 +657,10 @@
         .work {
           font-size: 5em;
         }
-        .model{
+        .model {
           bottom: 50%;
         }
       }
-      
     }
   }
 
@@ -618,8 +670,8 @@
 
   .skills {
     .container {
-      .secTitle{
-        h2{
+      .secTitle {
+        h2 {
           font-size: 40px;
         }
       }
@@ -741,8 +793,8 @@
 
   .skills {
     .container {
-      .secTitle{
-        h2{
+      .secTitle {
+        h2 {
           font-size: 30px;
         }
       }
@@ -753,6 +805,23 @@
   }
 
   // * skills section end
+
+  // * services section start
+  .services{
+    .container{
+      .secTitle{
+        h2{
+          font-size: 40px;
+        }
+      }
+      .row{
+        .seviceCard{
+          flex-direction: column;
+        }
+      }
+    }
+  }
+  // * services section end
 }
 
 // ! 365px
