@@ -28,7 +28,7 @@
     .row {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      column-gap: 90px;
+    //   column-gap: 90px;
       row-gap: 70px;
       .cardContainer {
         perspective: 50em;

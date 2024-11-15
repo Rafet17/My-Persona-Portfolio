@@ -402,7 +402,7 @@ body {
 .cardSection .container .row .card {
   border-radius: 20px;
   box-shadow: 0px 5px 60px 0px rgba(2, 24, 93, 0.08);
-  padding: 55px 48px 35px 48px;
+  padding: 55px 48px 35px 28px;
   background-color: #25262f;
   transition: all 0.3s ease;
 }
@@ -920,8 +920,6 @@ body {
 .myWorksPage .container .row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  -moz-column-gap: 90px;
-       column-gap: 90px;
   row-gap: 70px;
 }
 .myWorksPage .container .row .cardContainer {
